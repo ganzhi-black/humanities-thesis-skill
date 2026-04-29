@@ -1,0 +1,15 @@
+# 人文社科论文写作 skill - Python 依赖
+# pip install -r requirements.txt
+
+# 文献搜索脚本依赖
+beautifulsoup4>=4.12.0    # HTML 解析（知网、万方、Google Scholar）
+requests>=2.31.0          # HTTP 请求（备用）
+
+# 文件读取依赖
+PyMuPDF>=1.23.0           # PDF 文本提取（import fitz）
+pdfplumber>=0.10.0        # PDF 表格/文本提取（备选）
+python-docx>=1.0.0        # DOCX 读取/生成
+
+# 可选：OCR（扫描件 PDF）
+# pytesseract>=0.3.10     # 需要系统安装 tesseract-ocr
+# Pillow>=10.0.0          # 图像处理
