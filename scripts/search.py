@@ -22,9 +22,13 @@ import sys, os, json, argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "lib"))
 
 from lib.schema import Paper, SearchResult
 from lib.query import expand_query, suggest_queries
+from dedupe import dedupe
+from score import rank
+from render import render_json, render_markdown, render_text
 
 # 注册所有数据源
 _SOURCES: dict[str, object] = {}
